@@ -10,13 +10,13 @@ public class cuc_hooks {
     public void beforeScenario() throws Exception{
 		Basepage.driverIn();
 		
-        System.out.println("This will run before the Scenario");
+        //System.out.println("This will run before the Scenario");
     }	
 	
 	@After
     public void afterScenario(){
 		Basepage.quit();
-        System.out.println("This will run after the Scenario");
+        //System.out.println("This will run after the Scenario");
     }
 
 }

@@ -1,33 +1,39 @@
 Feature: playlist_operations
 
   Scenario: rename playlist name
-    Given I want to login audiodigest web as prerequisite
-    And I validate the dashboard page is displayed
-    And I click on playlist button 
-    And I validate playlist page
-    And I click on myplaylist
-    And I click on renameplaylist
-    Then I validate the playlistpop window is displayed
-    And I enter playlist name
-    When I click on update
-    Then I validate the playlistname
+    Given I am at the audiodigest home page to login as prerequsite
+    And I click on playlist tab and validate
+    And I click on myplaylist and rename playlist
+    Then I validate the playlistpop is displayed
+    And I enter playlist name and update
+    And I validate the updated playlistname
+    Then I logout user
 
-  Scenario: create playlist and verify in dashboard
+  Scenario: verify user able to create playlist and verify in dashboard
   
-    Given I want to login audiodigest web as prerequisite
-    And I validate the dashboard page is displayed
-    And I click on playlist button 
-    And I validate playlist page
-    And I click create playlist
-    And I enter playlist name
-    And I click library
-    Then I validate library page
-    And I click course add to playlist
-    And I validate the add to course pop up is displayed
-    And I click on audio play check box and save
-    Then I click on dasboard 
-    And I validate the dash board page
-    Then I validate the play list name
+    Given I am at the audiodigest home page to login as prerequsite
+    And I click on playlist button and validate
+    And I create playlist and validate
+    And I navigate to library tab and validate
+    And I click on add to playlist and validate
+    And I click on playlist name check box and save
+    And I navigate to dasboard page and validate
+    And I validate the playlist name
+    Then I logout user
+    
+    
+   Scenario: validate user is able to delete custom playlist
+   Given I am at the audiodigest home page to login as prerequsite
+    And I click on playlist tab and validate
+    And I click on My playlist
+    And I delete playlist and validate
+    Then I logout user
+   
+   
+   
+   
+   
+   
     
     
     

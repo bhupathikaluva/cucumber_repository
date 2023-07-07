@@ -3,6 +3,7 @@ package com.pages;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,9 +15,10 @@ public static WebDriver driver;
 //To instantiate driver
 	public static void  driverIn() throws Exception {
 	     driver = new ChromeDriver();
+	     driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	     properties_fileRead();
 		driver.get(p.getProperty("baseurl"));
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 		driver.manage().window().maximize();
 		
 	}

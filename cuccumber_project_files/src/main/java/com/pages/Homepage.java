@@ -18,17 +18,8 @@ public class Homepage {
     	return Basepage.getDriver().findElement(profileLoginButtonBy);
 	}
     
-   
-    //actions
-//    public static void AcceptCookies() throws Exception {
-//    	Thread.sleep(5000);
-//    	AgreeButton().click();
-//    	Thread.sleep(5000);
-//    }
-    
     public static void profile_login() throws Exception {
     	profileLoginButton().click();
-    	//Thread.sleep(5000);
     }
 
 }

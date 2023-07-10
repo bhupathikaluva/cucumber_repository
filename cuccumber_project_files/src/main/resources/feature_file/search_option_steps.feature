@@ -1,6 +1,6 @@
 Feature: search options
 
-Scenario: 
+Scenario: verify and validate of speciality results
     Given I am at the audiodigest home page to login as prerequsite
     And I enter speciality in search by speciality option
     And  I validate search results

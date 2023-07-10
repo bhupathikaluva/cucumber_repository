@@ -100,11 +100,12 @@ public class common_Methods {
 	
 	// To get currentUrl
 	public static String CurrentUrl() {
+		//System.out.println(Basepage.getDriver().getCurrentUrl());
 		return Basepage.getDriver().getCurrentUrl();
 	}
 	
 	
-	
+
 	// To close current browser
 	public static void 	close() {
 		driver.close();

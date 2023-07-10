@@ -1,31 +1,33 @@
 package stepdef;
 
+import com.pages.constants;
+import com.pages.dashboardPage;
+
+import common_methods.validations;
 import io.cucumber.java.en.Given;
 
 public class searchOptions_steps {
 	
 	@Given("I enter speciality in search by speciality option")
-	public void i_enter_speciality_in_search_by_speciality_option() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void i_enter_speciality_in_search_by_speciality_option() throws Exception {
+		dashboardPage.search_speciality(constants.speciality);
 	}
 
 	@Given("I validate search results")
-	public void i_validate_search_results() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void i_validate_search_results() throws Exception {
+		validations.IsDsiplayed(dashboardPage.Vdt_search_result(), "search results are not displayed");
 	}
 
 	@Given("I search by family medicine speciality and validate results")
-	public void i_search_by_family_medicine_speciality_and_validate_results() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void i_search_by_family_medicine_speciality_and_validate_results() throws Exception {
+		dashboardPage.search_familymedicine();
 	}
 
 	@Given("I click on cross icon user keyword and validate")
-	public void i_click_on_cross_icon_user_keyword_and_validate() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void i_click_on_cross_icon_user_keyword_and_validate() throws Exception {
+		dashboardPage.cross_icon_filterd_splty();
+	    
 	}
+
 
 }

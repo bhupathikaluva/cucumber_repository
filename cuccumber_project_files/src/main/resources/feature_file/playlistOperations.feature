@@ -12,13 +12,10 @@ Feature: playlist_operations
   Scenario: verify user able to create playlist and verify in dashboard
   
     Given I am at the audiodigest home page to login as prerequsite
-    And I click on playlist button and validate
+    And I click on playlist tab and validate
     And I create playlist and validate
-    And I navigate to library tab and validate
-    And I click on add to playlist and validate
-    And I click on playlist name check box and save
-    And I navigate to dasboard page and validate
-    And I validate the playlist name
+    And I navigate to library tab and add course to playlist
+    And I navigate to dasboard page and validate playlist
     Then I logout user
     
     

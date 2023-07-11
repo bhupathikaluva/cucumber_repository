@@ -65,19 +65,16 @@ public class playlist_Operations_steps {
 	    validations.IsTrue(common_Methods.CurrentUrl(), constants.HomePageUrl, "home page url is not displayed");
 	}
 
-//	@Given("I click on playlist button and validate")
-//	public void i_click_on_playlist_button_and_validate() {
-//	    
-//	}
 
 	@Given("I create playlist and validate")
 	public void i_create_playlist_and_validate() throws Exception {
 		Playlist_page.ClickOnMyplaylist();
 		Playlist_page.ClickOnCreatePlaylist();
-		validations.IsDsiplayed(Playlist_page.create_playlist_Popup(),"updated playlist name is not displayed");
+		validations.IsDsiplayed(Playlist_page.create_playlist_Popup(),"updated playlist popup is not displayed");
 		Playlist_page.enterPlaylist(constants.playlist_Name);
 		Playlist_page.CreatePlaylist();
 		validations.IsDsiplayed(Playlist_page.vdt_created_Playlist(),"playlist name is not displayed");
+		
 	}
 
 	

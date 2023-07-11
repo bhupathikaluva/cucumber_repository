@@ -19,30 +19,6 @@ public class library_steps {
 	    
 	}
 
-	@Given("I select start date and end date validate date filtered results displayed")
-	public void i_select_start_date_and_end_date_validate_date_filtered_results_displayed() {
-	    
-		
-	}
-
-	@Then("I enter title or issue id and validate filtered results displayed")
-	public void i_enter_title_or_issue_id_and_validate_filtered_results_displayed() {
-	   
-		
-	}
-
-	@Then("I select valid speciality and validate filtered results displayed")
-	public void i_select_valid_speciality_and_validate_filtered_results_displayed() {
-	    
-		
-	}
-
-	@Then("I Select valid status and validate filtered results displayed")
-	public void i_select_valid_status_and_validate_filtered_results_displayed() {
-	    
-		
-	}
-
 	@Given("I click on add to playlist link and validate popup")
 	public void i_click_on_add_to_playlist_link_and_validate_popup() throws Exception {
 	   
@@ -56,12 +32,34 @@ public class library_steps {
 	  validations.IsDsiplayed(libraryPage.vdt_blankPlylist(),"error message is not displayed");
 		
 	}
+	
+	@Given("I click on delete button lecture and validate popup")
+	public void i_click_on_delete_button_lecture_and_validate_popup() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new io.cucumber.java.PendingException();
+	}
 
-	@Given("I select existing playlists and save")
-	public void i_select_existing_playlists_and_save() {
-		
+	@Given("I click on archive button and validate")
+	public void i_click_on_archive_button_and_validate() throws Exception {
+	    libraryPage.delete_lecture();
+	    libraryPage.archive_lecture();
 		
 	}
+
+	@Given("I click on archive tab under library page")
+	public void i_click_on_archive_tab_under_library_page() throws Exception {
+	    
+		libraryPage.archive_section();
+	}
+
+	@Given("I validate archived lecture displyed")
+	public void i_validate_archived_lecture_displyed() throws Exception {
+		validations.IsDsiplayed(libraryPage.vdt_archive_lecture(),"archived lecture is not displayed");
+		
+	}
+
+
+	
 
 
 }

@@ -17,6 +17,12 @@ public class libraryPage {
 	
 	public static final By SaveButtonBy=By.xpath("//input[@id='submitbutmodal']");
 	
+	public static final By delete_lecture_BtnBy=By.xpath("//input[@id='container_2_rgLibrary_ctl00_ctl04_gbcOpenWindow']");
+	public static final By vdt_delete_lecture_PopupBy=By.xpath("//div[@id='container_2_RadWindow3_C']");
+	public static final By archive_BtnBy=By.xpath("//input[@id='container_2_RadWindow3_C_Btn_ArchiveLibrary3']");
+	public static final By archive_tabBy=By.xpath("//span[@class='rtsTxt'][normalize-space()='Archive']");
+	public static final By vdt_archive_lectureBy=By.xpath("//span[@id='container_2_rgLibrary_ctl00_ctl04_HyperLink11']");
+	
 	
 	
 	public static WebElement courseAddtoPlaylist() {
@@ -42,6 +48,26 @@ public class libraryPage {
 		return Basepage.getDriver().findElement(SaveButtonBy);
 	}
 	
+	public static WebElement delete_lecture_Btn() {
+		return Basepage.getDriver().findElement(delete_lecture_BtnBy);
+	}
+	
+	public static WebElement vdt_delete_lecture_Popup() {
+		return Basepage.getDriver().findElement(vdt_delete_lecture_PopupBy);
+	}
+	
+	public static WebElement archive_BtnBy() {
+		return Basepage.getDriver().findElement(archive_BtnBy);
+	}
+	
+	public static WebElement archive_tab() {
+		return Basepage.getDriver().findElement(archive_tabBy);
+	}
+	
+	public static WebElement vdt_archive_lecture() {
+		return Basepage.getDriver().findElement(vdt_archive_lectureBy);
+	}
+	
 	
 	
 	public static void Course_add_ToPlaylist() throws Exception {
@@ -52,8 +78,24 @@ public class libraryPage {
 	}
 	
 	public static void create_balnk_playlist() {
-		
 		saveButton().click();
+	}
+	
+	public static void delete_lecture() throws Exception {
+		Thread.sleep(3000);
+		delete_lecture_Btn().click();
+		validations.IsDsiplayed(addCourseToPlayListPopup(), "add course to playlist popup is not displayed");
+		
+	}
+	
+	public static void archive_lecture() throws Exception {
+		
+		archive_BtnBy().click();
+	}
+	
+	public static void archive_section() throws  Exception{
+		Thread.sleep(3000);
+		archive_tab().click();
 	}
 	
 //	public static void addcourse() throws Exception {

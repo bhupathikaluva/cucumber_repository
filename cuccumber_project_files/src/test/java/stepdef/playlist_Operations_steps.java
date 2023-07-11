@@ -105,4 +105,20 @@ public class playlist_Operations_steps {
 		Playlist_page.delete_playlist();
 		
 	}
+	
+	@Given("I click on create playlist")
+	public void i_click_on_create_playlist() throws Exception {
+		Playlist_page.ClickOnCreatePlaylist();
+		validations.IsDsiplayed(Playlist_page.create_playlist_Popup(),"updated playlist popup is not displayed");
+		Playlist_page.enterPlaylist(constants.extng_playlist_Name);
+		Playlist_page.CreatePlaylist();
+	    
+	}
+
+	@Given("I enter existing playlistname and validate")
+	public void i_enter_existing_playlistname_and_validate() throws Exception {
+		validations.IsDsiplayed(Playlist_page.existing_playlist_error(),"existing playlist error is not displayed");
+		Playlist_page.plylist_popup_cross_Btn();
+	   
+	}
 }

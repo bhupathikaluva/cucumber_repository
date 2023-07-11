@@ -25,6 +25,16 @@ Feature: playlist_operations
     And I click on My playlist
     And I delete playlist and validate
     Then I logout user
+    
+   Scenario: validate user is able to delete custom playlist   
+    Given I am at the audiodigest home page to login as prerequsite
+    And I click on playlist tab and validate
+    And I click on create playlist
+    And I enter existing playlistname and validate
+    Then I logout
+    
+   
+   
    
    
    

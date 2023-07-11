@@ -29,7 +29,8 @@ public class Playlist_page {
 	public static final By NavigateTopreviousPlayListBy=By.xpath("//span[@title='Previus Playlist']");
 	public static final By validateNextPlaylistBy=By.xpath("//span[contains(text(),'title1')]");
 	public static final By lastPlaylistTextBy=By.xpath("//span[contains(text(),'Anesthesiology Platinum Membership 1 year MP3')]");
-	
+	public static final By existing_playlist_errorBy=By.xpath("//div[@id='alCreationError']");
+	public static final By poup_cross_btnBy=By.xpath("//div[@id='CreateModal']//a[normalize-space()='×']");
 	public static final By library_tab_By=By.xpath("//span[normalize-space()='Library']");
 
 	
@@ -128,6 +129,15 @@ public class Playlist_page {
 	public static WebElement NavigateTolastPlaylist() {
 		return Basepage.getDriver().findElement(lastPlaylistTextBy);
 	}
+	
+	public static WebElement existing_playlist_error() {
+		return Basepage.getDriver().findElement(existing_playlist_errorBy);
+	}
+	
+	public static WebElement poup_cross_btn() {
+		return Basepage.getDriver().findElement(poup_cross_btnBy);
+	}
+	
 
 	
 	//action
@@ -199,6 +209,11 @@ public class Playlist_page {
 	public static void Library_tab() throws Exception {
 		Thread.sleep(3000);
 		library_Tab().click();
+	}
+	
+	public static void plylist_popup_cross_Btn() throws InterruptedException {
+		Thread.sleep(3000);
+		poup_cross_btn().click();
 	}
 	
 	

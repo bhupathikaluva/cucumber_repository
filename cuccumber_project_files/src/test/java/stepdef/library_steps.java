@@ -1,6 +1,5 @@
 package stepdef;
 
-import com.pages.Playlist_page;
 import com.pages.constants;
 import com.pages.dashboardPage;
 import com.pages.libraryPage;
@@ -8,7 +7,6 @@ import com.pages.libraryPage;
 import common_methods.common_Methods;
 import common_methods.validations;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 
 public class library_steps {
 	
@@ -34,14 +32,13 @@ public class library_steps {
 	}
 	
 	@Given("I click on delete button lecture and validate popup")
-	public void i_click_on_delete_button_lecture_and_validate_popup() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	public void i_click_on_delete_button_lecture_and_validate_popup() throws Exception {
+		libraryPage.delete_lecture();
 	}
 
 	@Given("I click on archive button and validate")
 	public void i_click_on_archive_button_and_validate() throws Exception {
-	    libraryPage.delete_lecture();
+	    
 	    libraryPage.archive_lecture();
 		
 	}

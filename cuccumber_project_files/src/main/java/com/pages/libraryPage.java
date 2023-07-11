@@ -89,13 +89,14 @@ public class libraryPage {
 	}
 	
 	public static void archive_lecture() throws Exception {
-		
+		Thread.sleep(3000);
 		archive_BtnBy().click();
 	}
 	
 	public static void archive_section() throws  Exception{
 		Thread.sleep(3000);
 		archive_tab().click();
+		Thread.sleep(3000);
 	}
 	
 //	public static void addcourse() throws Exception {

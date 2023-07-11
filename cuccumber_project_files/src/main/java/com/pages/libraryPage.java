@@ -12,7 +12,9 @@ public class libraryPage {
 	public static final By addCourseToPlayListPopupBy=By.xpath("//div[@id='pmSingleSearch']");
 	public static final By checkboxBy=By.xpath("//div[@id='mCSB_1_container']/div[12]/span/label");
 	public static final By dashboardBy=By.xpath("//span[normalize-space()='Dashboard']");
-	//public static final By audioPlayCheckBoxBy=By.xpath("//label[contains(text(),'myplaylist')]");
+	public static final By vdt_blankplylist_error_MsgBy=By.xpath("//div[contains(text(),'Please select an existing playlist or create a new playlist')]");
+	
+	
 	public static final By SaveButtonBy=By.xpath("//input[@id='submitbutmodal']");
 	
 	
@@ -32,9 +34,9 @@ public class libraryPage {
 		return Basepage.getDriver().findElement(dashboardBy);
 	}
 	
-//	public static WebElement audioplaycheckBox() {
-//		return Basepage.getDriver().findElement(audioPlayCheckBoxBy);
-//	}
+	public static WebElement vdt_blankPlylist() {
+		return Basepage.getDriver().findElement(vdt_blankplylist_error_MsgBy);
+	}
 	
 	public static WebElement saveButton() {
 		return Basepage.getDriver().findElement(SaveButtonBy);
@@ -47,6 +49,11 @@ public class libraryPage {
 		courseAddtoPlaylist().click();
 		Thread.sleep(5000);
 		validations.IsDsiplayed(addCourseToPlayListPopup(), "add course to playlist popup is not displayed");
+	}
+	
+	public static void create_balnk_playlist() {
+		
+		saveButton().click();
 	}
 	
 //	public static void addcourse() throws Exception {

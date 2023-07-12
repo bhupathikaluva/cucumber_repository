@@ -32,6 +32,24 @@ public class Playlist_page {
 	public static final By existing_playlist_errorBy=By.xpath("//div[@id='alCreationError']");
 	public static final By poup_cross_btnBy=By.xpath("//div[@id='CreateModal']//a[normalize-space()='×']");
 	public static final By library_tab_By=By.xpath("//span[normalize-space()='Library']");
+	
+	//
+	public static final By CreatePlaylistBtn = By.xpath("//a[@title='Create playlist']");
+	public static final By CPpopupTitle=By.xpath("//span[text()='Create Playlist']");
+	public static final By CPTextbox=By.xpath("//input[@id='txtPlaylistName']");
+    public static final By CreateButton=By.xpath("//input[@value='CREATE']");
+    public static final By playlistPopupTitle=By.xpath("//div[@id=\"CreateModal\"]/span");
+    public static final By ClickAnyPlaylist=By.xpath("//a[@class='ng-binding']//span[text()='Oncology']");
+    public static final By ClickMyPlaylistTab=By.xpath("//a[@id='lnkMPCM']");
+    public static final By ClickAudioDigestPlaylistTab=By.xpath("//a[@id='lnkByADCM']");
+    
+    //
+    
+    public static final By PlaylistsBy=By.xpath("//span[text()='Playlists']");
+	public static final By enternameBy=By.xpath("//input[@id='txtPlaylistName']");
+	public static final By createButtonBy = By.xpath("//input[@value='CREATE']");
+	public static final By clickonAllBy= By.xpath("//a[@id='lnkAllCM']");
+	public static final By backtoplaylisttabBy= By.xpath("//span[text()='Playlists']");
 
 	
 	
@@ -138,6 +156,78 @@ public class Playlist_page {
 		return Basepage.getDriver().findElement(poup_cross_btnBy);
 	}
 	
+	public static WebElement createPlaylistBtn()
+	{
+
+		return Basepage.getDriver().findElement(CreatePlaylistBtn);
+
+	}
+	
+	public static WebElement createPlaylistPopupTitle()
+	{
+
+		return Basepage.getDriver().findElement(CPpopupTitle);
+
+	}
+	public static WebElement playlistTextBox()
+	{
+
+		return Basepage.getDriver().findElement(CPTextbox);
+
+	}
+	public static WebElement playlistCreateBtn()
+	{
+
+		return Basepage.getDriver().findElement(CreateButton);
+
+	}
+	public static WebElement playlistTitle()
+	{
+
+		return Basepage.getDriver().findElement(playlistPopupTitle);
+
+	}
+	public static WebElement clickOnPlaylist()
+	{
+
+		return Basepage.getDriver().findElement(ClickAnyPlaylist);
+
+	}
+	public static WebElement clickOnMyPlaylist()
+	{
+
+		return Basepage.getDriver().findElement(ClickMyPlaylistTab);
+
+	}
+	public static WebElement clickOnAudioDigestPlaylist()
+	{
+
+		return Basepage.getDriver().findElement(ClickAudioDigestPlaylistTab);
+
+	}
+	
+	public static WebElement PlaylistTab()
+	{
+		return Basepage.getDriver().findElement(PlaylistsBy);
+	}
+	
+	public static WebElement nameEnter()
+	{
+		return Basepage.getDriver().findElement(enternameBy);
+	}
+	public static WebElement CreateBn()
+	{
+		return Basepage.getDriver().findElement(createButtonBy);
+	}
+	public static WebElement Allbtn()
+	{
+		return Basepage.getDriver().findElement(clickonAllBy);
+	}
+	public static WebElement Backplaylist()
+	{
+		return Basepage.getDriver().findElement(backtoplaylisttabBy);
+	}
+	
 
 	
 	//action
@@ -216,6 +306,41 @@ public class Playlist_page {
 		poup_cross_btn().click();
 	}
 	
+	public static void clickOnCreatePlaylist() throws Exception
+	{
+		createPlaylistBtn().click();
+		Thread.sleep(3000);
+	}
+	public static void CPlaylistPopupTitle() throws Exception
+	{
+		createPlaylistPopupTitle().click();
+		Thread.sleep(3000);
+	}
+	public static void enterplaylistTextbox() throws Exception
+	{
+		playlistTextBox().sendKeys(constants.newplaylistname);
+		Thread.sleep(3000);
+	}
+	public static void playlistCreateButton() throws Exception
+	{
+		playlistCreateBtn().click();
+		Thread.sleep(3000);
+	}
 	
+	public static void clickingAnyPlaylist() throws Exception
+	{
+		clickOnPlaylist().click();
+		Thread.sleep(3000);
+	}
+	public static void expandMyPlaylist() throws Exception
+	{
+		clickOnMyPlaylist().click();
+		Thread.sleep(3000);
+	}
+	public static void expandAudioDigestPlaylist() throws Exception
+	{
+		clickOnAudioDigestPlaylist().click();
+		Thread.sleep(3000);
+	}
 
 }

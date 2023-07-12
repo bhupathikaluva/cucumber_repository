@@ -9,10 +9,10 @@ public class validations {
 	
 	
 	
-	public static void IsTrue(String actual, String ExepectedUrl, String Message)throws Exception
+	public static void IsTrue(String actual, String Exepected, String Message)throws Exception
 	{
 		
-		 if(!actual.equals(ExepectedUrl))
+		 if(!actual.equals(Exepected))
 		 {
 			 throw new Exception(Message);
 		 }

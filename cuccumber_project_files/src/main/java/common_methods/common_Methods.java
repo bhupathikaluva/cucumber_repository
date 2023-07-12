@@ -104,11 +104,43 @@ public class common_Methods {
 		return Basepage.getDriver().getCurrentUrl();
 	}
 	
+	// select from drop down
+	public static void selectDropDown(WebElement element,String visibleText)
+	{
+		Select s=new Select(element);
+		s.selectByVisibleText(visibleText);
+		
+	}
 	
+	public static void refresh_page() throws Exception {
+		
+		driver.navigate().refresh();
+		Thread.sleep(3000);
+	}
+
 
 	// To close current browser
 	public static void 	close() {
 		driver.close();
 	}
+	
+	
+	public static String clickSearchMenuAndTypeOption(String Xpath,String option)
+	{
+
+		return String.format(Xpath,option);
+	}
+	
+
+//	public static void dataIstrue(String actual, String expected, String message) throws Exception {
+//		
+//		if(!actual.equals(expected)) {
+//			throw new Exception(message);
+//		}
+		
+		
+		
+		
+	
 
 }

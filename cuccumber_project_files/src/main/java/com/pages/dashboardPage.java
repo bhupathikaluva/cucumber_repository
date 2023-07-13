@@ -32,6 +32,7 @@ public class dashboardPage {
 	public static final By clickSearchIcon=By.xpath("//a[@id='header_0_btnSearchTop']"); 
 	public static final By enterOntopicFilter=By.xpath("//input[@id='container_2_racbTopic_Input']");
 	public static final By topicFilter=By.xpath("//input[@id='container_2_racbTopic_ClientState']");
+	public static final By workprofile_By=By.xpath("//ul[@id='drop1']//a[@id='MyWorkProfileTab']");
 	
 	//web Element
 
@@ -121,6 +122,11 @@ public class dashboardPage {
 	{
 		return Basepage.getDriver().findElement(dashboardBtnBy);
 	}
+	public static WebElement workprofile()
+	{
+		return Basepage.getDriver().findElement(workprofile_By);
+	}
+	
 		
 
 	//Action
@@ -172,6 +178,8 @@ public class dashboardPage {
 		
 	}
 	
+	
+	
 	public static void navigateToPlaylistpage() throws Exception
 	{
 
@@ -212,5 +220,14 @@ public class dashboardPage {
 		Dashboardbtn().click();
 		Thread.sleep(3000);
 	}
-
-}
+	
+	public static void navigate_myworkprofile() throws Exception {
+		Thread.sleep(3000);
+		ProfileDrpDwn_Btn().click();
+		Thread.sleep(3000);
+		validations.IsDsiplayed(Profile_DrpDwnList_Vdt(), "profile dropdown is not displayed");
+		Thread.sleep(3000);
+		workprofile().click();
+	}
+	
+	}

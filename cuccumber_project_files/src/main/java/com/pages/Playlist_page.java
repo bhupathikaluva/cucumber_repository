@@ -32,7 +32,6 @@ public class Playlist_page {
 	public static final By existing_playlist_errorBy=By.xpath("//div[@id='alCreationError']");
 	public static final By poup_cross_btnBy=By.xpath("//div[@id='CreateModal']//a[normalize-space()='×']");
 	public static final By library_tab_By=By.xpath("//span[normalize-space()='Library']");
-	
 	//
 	public static final By CreatePlaylistBtn = By.xpath("//a[@title='Create playlist']");
 	public static final By CPpopupTitle=By.xpath("//span[text()='Create Playlist']");
@@ -42,9 +41,7 @@ public class Playlist_page {
     public static final By ClickAnyPlaylist=By.xpath("//a[@class='ng-binding']//span[text()='Oncology']");
     public static final By ClickMyPlaylistTab=By.xpath("//a[@id='lnkMPCM']");
     public static final By ClickAudioDigestPlaylistTab=By.xpath("//a[@id='lnkByADCM']");
-    
     //
-    
     public static final By PlaylistsBy=By.xpath("//span[text()='Playlists']");
 	public static final By enternameBy=By.xpath("//input[@id='txtPlaylistName']");
 	public static final By createButtonBy = By.xpath("//input[@value='CREATE']");
@@ -340,6 +337,41 @@ public class Playlist_page {
 	public static void expandAudioDigestPlaylist() throws Exception
 	{
 		clickOnAudioDigestPlaylist().click();
+		Thread.sleep(3000);
+	}
+	
+	public static void NavigateToPlaylist() throws Exception
+	{
+		Thread.sleep(3000);
+		PlaylistTab().click();
+		Thread.sleep(3000);
+	}
+	public static void Entername() throws Exception
+	{
+		nameEnter().click();
+		Thread.sleep(3000);
+		nameEnter().sendKeys("ad1234567891234567");
+	}
+	public static void Entername2() throws InterruptedException
+	{
+		nameEnter().click();
+		Thread.sleep(3000);
+		nameEnter().sendKeys("af12345678912345");
+	}
+	public static void clickoncreateButton() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		CreateBn().click();
+	}
+	public static void clickonAllbtn() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		Allbtn().click();
+	}
+	public static void BackToPlaylist() throws Exception
+	{
+		Thread.sleep(3000);
+		Backplaylist().click();
 		Thread.sleep(3000);
 	}
 

@@ -26,6 +26,7 @@ public class constants {
     public final static String selectOldTextByDrpdwn="Oldest (PublicationDate)";
    
 	public final static String LoginPageurl="https://www.audio-digest.org/Login";
+	public final static String myworkprofile_url="https://www.audio-digest.org/Profile/MyWorkProfile#MyWorkProfile";
 
 	//public final static String updated_Playlist_Name="playlist01";
 
